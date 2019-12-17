@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileProject.SleepCalculator">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Pink" Spacing="15">
+            <Label  Text="Stay Organised"  FontSize="60" VerticalOptions="Start" HorizontalOptions="CenterAndExpand"/>
+            <BoxView VerticalOptions="Start" HorizontalOptions="StartAndExpand" Color="Black" HeightRequest="10" WidthRequest="500"/>
+            <Button BorderRadius="20" Margin="20, 0" Text="Home" FontSize="Medium" TextColor="White"
+                    BorderColor="Black" BackgroundColor="MidnightBlue"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    Clicked="Home_Clicked"/>
+            
+            <Label Text="Enter how many minutes needed to get ready: " FontSize="Medium"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="EntryTimeToReady"
+                   Keyboard="Numeric"
+                   HorizontalOptions="Center"
+                   WidthRequest="200"
+                   Placeholder="0000 (numbers only)"/>
+
+            <Label Text="Enter minutes needed to get to college: " FontSize="Medium"
+                VerticalOptions="Start" 
+                HorizontalOptions="Center" />
+            <Entry x:Name="EntryTimeToCollege" 
+                   Keyboard="Numeric"
+                   HorizontalOptions="Center"
+                   WidthRequest="200"
+                   Placeholder="0000 (numbers only)"/>
+
+            <Label Text="Enter time to be in college by the hour: " FontSize="Medium"
+                VerticalOptions="Start" 
+                HorizontalOptions="Center" />
+            <Entry x:Name="EntryTimeCollegeHour" 
+                   Keyboard="Numeric"
+                   HorizontalOptions="Center"
+                   WidthRequest="200"
+                   Placeholder="0000 (numbers only)"/>
+
+            <Label Text="Enter time to be in college by the minute: " FontSize="Medium"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="EntryTimeCollegeMinute"
+                   Keyboard="Numeric"
+                   HorizontalOptions="Center"
+                   WidthRequest="200"
+                   Placeholder="0000 (numbers only)"/>
+
+            <Button x:Name="BtnCalculate" BorderRadius="20" Text="Calculate" Margin="50,10" FontSize="Medium" TextColor="White"
+                    BorderColor="Black" BackgroundColor="MidnightBlue"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Start"
+                    Clicked="BtnCalculate_Clicked"/>
+
+            <Label x:Name="LblAnswer" Text="" FontSize="Medium" Margin="4,2" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

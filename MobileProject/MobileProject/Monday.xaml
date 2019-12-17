@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileProject.Monday">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="MidnightBlue">
+            <Label  Text="Stay Organised" TextColor="White"  FontSize="60" VerticalOptions="Start" HorizontalOptions="CenterAndExpand"/>
+            <BoxView VerticalOptions="Start" HorizontalOptions="StartAndExpand" Color="Black" HeightRequest="10" WidthRequest="10000"/>
+            <Grid BackgroundColor="Pink">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Button Text="BACK" FontSize="Medium" BorderColor="Black"
+                       HorizontalOptions="Center" VerticalOptions="Center"
+                       Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1"
+                       Clicked="BackButton_Clicked"/>
+
+                <Button Text="Mond" FontSize="Medium" BorderColor="Black"
+                       HorizontalOptions="Center" VerticalOptions="Center"
+                       Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1"
+                       Clicked="MondayButton_Clicked"/>
+
+                <Button Text="Tues" FontSize="Medium" BorderColor="Black"
+                       HorizontalOptions="CenterAndExpand" VerticalOptions="Center"
+                       Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="1"
+                       Clicked="TuesdayButton_Clicked"/>
+
+                <Button Text="Wed" FontSize="Medium" BorderColor="Black"
+                       HorizontalOptions="CenterAndExpand" VerticalOptions="Center"
+                       Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="1"
+                       Clicked="WednesdayButton_Clicked"/>
+
+                <Button Text="Thur" FontSize="Medium" BorderColor="Black"
+                       HorizontalOptions="CenterAndExpand" VerticalOptions="Center"
+                       Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="1"
+                       Clicked="ThursdayButton_Clicked"/>
+
+                <Button Text="Frid" FontSize="Medium" BorderColor="Black"
+                       HorizontalOptions="CenterAndExpand" VerticalOptions="Center"
+                       Grid.Row="0" Grid.Column="5" Grid.ColumnSpan="1"
+                       Clicked="FridayButton_Clicked"/>
+            </Grid>
+
+            <Grid BackgroundColor="Pink">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="80" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Frame
+                    x:Name="Slot1" CornerRadius="15" Padding="0" IsVisible="True" BackgroundColor="AntiqueWhite" Margin="15,10,15,10" HasShadow="False" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6">
+                    <Label x:Name="Module1" Text="" Margin="30, 0, 0, 0" FontSize="Medium" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="StartAndExpand"
+                        Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"/>
+                </Frame>
+                <Frame x:Name="SlotTime1"
+                    CornerRadius="15" Padding="0" BackgroundColor="AntiqueWhite" Margin="0,10,15,10" HasShadow="False" Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="1">
+                    <Label x:Name="Time1" Text="" FontSize="20" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                </Frame>
+                <Frame x:Name="SlotButton1"
+                    CornerRadius="15" Padding="0" BackgroundColor="AntiqueWhite" Margin="0,10,15,10" HasShadow="False" Grid.Row="0" Grid.Column="5" Grid.ColumnSpan="1">
+                    <Button Text="edit" BorderRadius="4" FontSize="15" BackgroundColor="LightSlateGray" VerticalOptions="Center" HorizontalOptions="StartAndExpand"
+                            Clicked="Edit1_Clicked" IsVisible="True"/>
+                </Frame>
+
+
+                <Frame x:Name="Editor1"
+                    CornerRadius="15" Padding="0" BackgroundColor="LightSkyBlue" Margin="10,10,10,10" IsVisible="False" HasShadow="False" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" Grid.RowSpan="5">
+                    <StackLayout Padding="20" Spacing="30">
+                        <Label Text="Enter Module/Activity Name Below" FontSize="Medium"
+                               VerticalOptions="Start" 
+                               HorizontalOptions="CenterAndExpand" />
+                        <Entry x:Name="Module1Name"
+                               Placeholder="EG: Mobile App and Internet Development"/>
+                        <Label Text="Enter Time Below" FontSize="Medium"
+                               VerticalOptions="Start" 
+                               HorizontalOptions="CenterAndExpand" />
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="80" />
+                                <RowDefinition Height="80" />
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Entry x:Name="TimeHour1" FontSize="Large" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            <Label Text=":" FontSize="50" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="1" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Start"/>
+                            <Entry x:Name="TimeMinute1" FontSize="Large" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="1" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            <Button Text="Save Changes" BorderRadius="20" BackgroundColor="LightGreen" FontSize="Medium" BorderColor="Black" HorizontalOptions="Center" VerticalOptions="Center" 
+                                    Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Clicked="SaveChanges1_Clicked"/>
+                        </Grid>
+                        
+                        
+                     
+                        
+                    </StackLayout>
+                </Frame>
+
+                <Frame
+                    x:Name="Slot2" CornerRadius="15" Padding="0" IsVisible="True" BackgroundColor="AntiqueWhite" Margin="15,10,15,10" HasShadow="False" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="6">
+                    <Label x:Name="Module2" Text="" Margin="30, 0, 0, 0" FontSize="Medium" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="StartAndExpand"
+                        Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"/>
+                </Frame>
+                <Frame x:Name="SlotTime2"
+                    CornerRadius="15" Padding="0" BackgroundColor="AntiqueWhite" Margin="0,10,15,10" HasShadow="False" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="1">
+                    <Label x:Name="Time2" Text="" FontSize="20" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                </Frame>
+                <Frame x:Name="SlotButton2"
+                    CornerRadius="15" Padding="0" BackgroundColor="AntiqueWhite" Margin="0,10,15,10" HasShadow="False" Grid.Row="1" Grid.Column="5" Grid.ColumnSpan="1">
+                    <Button Text="edit" BorderRadius="4" FontSize="15" BackgroundColor="LightSlateGray" VerticalOptions="Center" HorizontalOptions="StartAndExpand"
+                            Clicked="Edit2_Clicked" IsVisible="True"/>
+                </Frame>
+
+
+                <Frame x:Name="Editor2"
+                    CornerRadius="15" Padding="0" BackgroundColor="LightSkyBlue" Margin="10,10,10,10" IsVisible="False" HasShadow="False" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" Grid.RowSpan="5">
+                    <StackLayout Padding="20" Spacing="30">
+                        <Label Text="Enter Module/Activity Name Below" FontSize="Medium"
+                               VerticalOptions="Start" 
+                               HorizontalOptions="CenterAndExpand" />
+                        <Entry x:Name="Module2Name"
+                               Placeholder="EG: Mobile App and Internet Development"/>
+                        <Label Text="Enter Time Below" FontSize="Medium"
+                               VerticalOptions="Start" 
+                               HorizontalOptions="CenterAndExpand" />
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="80" />
+                                <RowDefinition Height="80" />
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Entry x:Name="TimeHour2" FontSize="Large" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            <Label Text=":" FontSize="50" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="1" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Start"/>
+                            <Entry x:Name="TimeMinute2" FontSize="Large" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="1" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            <Button Text="Save Changes" BorderRadius="20" BackgroundColor="LightGreen" FontSize="Medium" BorderColor="Black" HorizontalOptions="Center" VerticalOptions="Center" 
+                                    Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Clicked="SaveChanges2_Clicked"/>
+                        </Grid>
+                        
+                        
+
+
+
+
+                    </StackLayout>
+                </Frame>
+
+                <Frame
+                    x:Name="Slot3" CornerRadius="15" Padding="0" IsVisible="True" BackgroundColor="AntiqueWhite" Margin="15,10,15,10" HasShadow="False" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="6">
+                    <Label x:Name="Module3" Text="" Margin="30, 0, 0, 0" FontSize="Medium" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="StartAndExpand"
+                        Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"/>
+                </Frame>
+                <Frame x:Name="SlotTime3"
+                    CornerRadius="15" Padding="0" BackgroundColor="AntiqueWhite" Margin="0,10,15,10" HasShadow="False" Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="1">
+                    <Label x:Name="Time3" Text="" FontSize="20" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                </Frame>
+                <Frame x:Name="SlotButton3"
+                    CornerRadius="15" Padding="0" BackgroundColor="AntiqueWhite" Margin="0,10,15,10" HasShadow="False" Grid.Row="2" Grid.Column="5" Grid.ColumnSpan="1">
+                    <Button Text="edit" BorderRadius="4" FontSize="15" BackgroundColor="LightSlateGray" VerticalOptions="Center" HorizontalOptions="StartAndExpand"
+                            Clicked="Edit3_Clicked" IsVisible="True"/>
+                </Frame>
+
+
+                <Frame x:Name="Editor3"
+                    CornerRadius="15" Padding="0" BackgroundColor="LightSkyBlue" Margin="10,10,10,10" IsVisible="False" HasShadow="False" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" Grid.RowSpan="5">
+                    <StackLayout Padding="20" Spacing="30">
+                        <Label Text="Enter Module/Activity Name Below" FontSize="Medium"
+                               VerticalOptions="Start" 
+                               HorizontalOptions="CenterAndExpand" />
+                        <Entry x:Name="Module3Name"
+                               Placeholder="EG: Mobile App and Internet Development"/>
+                        <Label Text="Enter Time Below" FontSize="Medium"
+                               VerticalOptions="Start" 
+                               HorizontalOptions="CenterAndExpand" />
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="80" />
+                                <RowDefinition Height="80" />
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Entry x:Name="TimeHour3" FontSize="Large" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            <Label Text=":" FontSize="50" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="1" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Start"/>
+                            <Entry x:Name="TimeMinute3" FontSize="Large" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="1" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            <Button Text="Save Changes" BorderRadius="20" BackgroundColor="LightGreen" FontSize="Medium" BorderColor="Black" HorizontalOptions="Center" VerticalOptions="Center" 
+                                    Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Clicked="SaveChanges3_Clicked"/>
+                        </Grid>
+
+
+
+
+                    </StackLayout>
+                </Frame>
+
+                <Frame
+                    x:Name="Slot4" CornerRadius="15" Padding="0" IsVisible="True" BackgroundColor="AntiqueWhite" Margin="15,10,15,10" HasShadow="False" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="6">
+                    <Label x:Name="Module4" Text="" Margin="30, 0, 0, 0" FontSize="Medium" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="StartAndExpand"
+                        Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"/>
+                </Frame>
+                <Frame x:Name="SlotTime4"
+                    CornerRadius="15" Padding="0" BackgroundColor="AntiqueWhite" Margin="0,10,15,10" HasShadow="False" Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="1">
+                    <Label x:Name="Time4" Text="" FontSize="20" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                </Frame>
+                <Frame x:Name="SlotButton4"
+                    CornerRadius="15" Padding="0" BackgroundColor="AntiqueWhite" Margin="0,10,15,10" HasShadow="False" Grid.Row="3" Grid.Column="5" Grid.ColumnSpan="1">
+                    <Button Text="edit" BorderRadius="4" FontSize="15" BackgroundColor="LightSlateGray" VerticalOptions="Center" HorizontalOptions="StartAndExpand"
+                            Clicked="Edit4_Clicked" IsVisible="True"/>
+                </Frame>
+
+
+                <Frame x:Name="Editor4"
+                    CornerRadius="15" Padding="0" BackgroundColor="LightSkyBlue" Margin="10,10,10,10" IsVisible="False" HasShadow="False" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" Grid.RowSpan="5">
+                    <StackLayout Padding="20" Spacing="30">
+                        <Label Text="Enter Module/Activity Name Below" FontSize="Medium"
+                               VerticalOptions="Start" 
+                               HorizontalOptions="CenterAndExpand" />
+                        <Entry x:Name="Module4Name"
+                               Placeholder="EG: Mobile App and Internet Development"/>
+                        <Label Text="Enter Time Below" FontSize="Medium"
+                               VerticalOptions="Start" 
+                               HorizontalOptions="CenterAndExpand" />
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="80" />
+                                <RowDefinition Height="80" />
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Entry x:Name="TimeHour4" FontSize="Large" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            <Label Text=":" FontSize="50" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="1" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Start"/>
+                            <Entry x:Name="TimeMinute4" FontSize="Large" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="1" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            <Button Text="Save Changes" BorderRadius="20" BackgroundColor="LightGreen" FontSize="Medium" BorderColor="Black" HorizontalOptions="Center" VerticalOptions="Center" 
+                                    Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Clicked="SaveChanges4_Clicked"/>
+                        </Grid>
+
+
+
+
+                    </StackLayout>
+                </Frame>
+
+                <Frame
+                    x:Name="Slot5" CornerRadius="15" Padding="0" IsVisible="True" BackgroundColor="AntiqueWhite" Margin="15,10,15,10" HasShadow="False" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="6">
+                    <Label x:Name="Module5" Text="" Margin="30, 0, 0, 0" FontSize="Medium" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="StartAndExpand"
+                        Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"/>
+                </Frame>
+                <Frame  x:Name="SlotTime5"
+                    CornerRadius="15" Padding="0" BackgroundColor="AntiqueWhite" Margin="0,10,15,10" IsVisible="True" HasShadow="False" Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="1">
+                    <Label x:Name="Time5" Text="" FontSize="20" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                </Frame>
+                <Frame x:Name="SlotButton5"
+                    CornerRadius="15" Padding="0" BackgroundColor="AntiqueWhite" Margin="0,10,15,10" HasShadow="False" Grid.Row="4" Grid.Column="5" Grid.ColumnSpan="1">
+                    <Button Text="edit" BorderRadius="4" FontSize="15" BackgroundColor="LightSlateGray" VerticalOptions="Center" HorizontalOptions="StartAndExpand"
+                            Clicked="Edit5_Clicked" IsVisible="True"/>
+                </Frame>
+                
+
+                <Frame x:Name="Editor5"
+                    CornerRadius="15" Padding="0" BackgroundColor="LightSkyBlue" Margin="10,10,10,10" IsVisible="False" HasShadow="False" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" Grid.RowSpan="5">
+                    <StackLayout Padding="20" Spacing="30">
+                        <Label Text="Enter Module/Activity Name Below" FontSize="Medium"
+                               VerticalOptions="Start" 
+                               HorizontalOptions="CenterAndExpand" />
+                        <Entry x:Name="Module5Name"
+                               Placeholder="EG: Mobile App and Internet Development"/>
+                        <Label Text="Enter Time Below" FontSize="Medium"
+                               VerticalOptions="Start" 
+                               HorizontalOptions="CenterAndExpand" />
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="80" />
+                                <RowDefinition Height="80" />
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Entry x:Name="TimeHour5" FontSize="Large" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            <Label Text=":" FontSize="50" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="1" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Start"/>
+                            <Entry x:Name="TimeMinute5" FontSize="Large" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="1" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            <Button Text="Save Changes" BorderRadius="20" BackgroundColor="LightGreen" FontSize="Medium" BorderColor="Black" HorizontalOptions="Center" VerticalOptions="Center" 
+                                    Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Clicked="SaveChanges5_Clicked"/>
+                        </Grid>
+
+
+
+
+                    </StackLayout>
+                </Frame>
+
+
+            </Grid>
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
